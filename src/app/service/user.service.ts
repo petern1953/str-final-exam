@@ -4,15 +4,12 @@ import { Observable } from 'rxjs';
 import { User } from '../model/user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
   endpoint: string = 'http://localhost:3000/users';
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) {}
 
   /**
    * Get all users from the database.
@@ -35,19 +32,19 @@ export class UserService {
    * Delete a user from the database.
    * The method is: this.http.delete
    */
-
-
+  remove(userId: number): void {
+    this.http
+      .delete<User>(`${this.endpoint}/${userId}`)
+      .subscribe(() => this.getAll());
+  }
 
   /**
    * Create a user in the database.
    * The method is: this.http.post
    */
 
-
-
   /**
    * Update a user in the database.
    * The method is: this.http.patch
    */
-
 }
