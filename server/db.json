@@ -2,14 +2,14 @@
   "users": [
     {
       "id": 5,
-      "name": "Maxy Pendall",
+      "name": "Mixy Pendallies",
       "email": "mpendall4@answers.com",
-      "address": "27588 Upham Lane",
-      "active": false
+      "address": "27588 Downham Lane",
+      "active": true
     },
     {
       "id": 6,
-      "name": "Catherin Hammatt",
+      "name": "Katerina Hammatt",
       "email": "chammatt5@w3.org",
       "address": "64923 Butterfield Parkway",
       "active": false
