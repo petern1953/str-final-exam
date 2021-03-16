@@ -10,7 +10,15 @@
         class="form-control"
         type="text"
         name="name"
-        [(ngModel)]="user.name">
+        [(ngModel)]="user.name"
+          pattern="^.{8,30}$"
+          required
+        >
+        <div [hidden]="userForm.controls.name?.valid || userForm.controls.name?.pristine"
+          class="error-message">
+          Required field. Must contain 8 to 30 chars!
+        </div>
+
       </div>
       <div class="form-group">
         <label>Email</label>
@@ -20,7 +28,15 @@
           class="form-control"
           type="text"
           name="email"
-          [(ngModel)]="user.email">
+          [(ngModel)]="user.email"
+          required
+          pattern="^[a-z0-9]+(\.[a-z0-9]+)?@[a-z0-9]+\.[a-z]{2,3}$"
+          >
+        <div [hidden]="userForm.controls.email?.valid || userForm.controls.email?.pristine"
+          class="error-message">
+          Must be xxx@xxx.xxx or xxx.xxx@xxx.xxx of form! (The closing xxx tag may have 2 or 3 chars.)
+        </div>
+
         </div>
         <div class="form-group">
           <label>Address</label>
@@ -29,7 +45,15 @@
           class="form-control"
           type="text"
           name="address"
-          [(ngModel)]="user.address">
+          [(ngModel)]="user.address"
+          required
+          pattern="^.{8,100}$"
+          >
+        <div [hidden]="userForm.controls.address?.valid || userForm.controls.address?.pristine"
+          class="error-message">
+          Required field. Must contain 8 to 100 chars!
+        </div>
+
       </div>
       <div class="form-group">
         <label>Active</label>
@@ -39,8 +63,11 @@
           <option [ngValue]="false">inactive</option>
         </select>
       </div>
-      <button type="submit" class="btn btn-primary btn-block mt-5">
-        <i class="fa fa-save"></i>
+      <button
+        [disabled]="userForm.invalid || updating"
+        class="btn btn-primary btn-block mt-5">
+        <i *ngIf="!updating" class="fa fa-save"></i>
+        <i *ngIf="updating" class="fa fa-refresh"></i>
       </button>
     </form>
   </div>
