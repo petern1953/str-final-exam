@@ -1,17 +1,10 @@
 {
   "users": [
     {
-      "id": 5,
-      "name": "Mixy Pendallies",
-      "email": "mpendall4@answers.com",
-      "address": "27588 Downham Street",
-      "active": true
-    },
-    {
       "id": 6,
       "name": "Katerina Hammatt",
       "email": "chammatt5@w3.org",
-      "address": "64923 Butterfield Parkway",
+      "address": "64923 Butterfield Norway",
       "active": false
     },
     {
@@ -670,6 +663,13 @@
       "name": "Milzie Cosbee",
       "email": "mcosbee2r@go.com",
       "address": "0642 Spaight Junction",
+      "active": false
+    },
+    {
+      "id": 101,
+      "name": "Kiss Cs. Dezső",
+      "email": "paa@gmail.com",
+      "address": "Budapest XI. Maros u. 55.",
       "active": false
     }
   ]

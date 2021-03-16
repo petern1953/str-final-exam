@@ -8,8 +8,13 @@
        >
   </div>
 
+      <div class="col-12 mb-3 mx-0 px-0">
+      <button [routerLink]="['user/0']" class="btn btn-success btn-block btn-lg">
+        <i class="fa fa-pencil"></i> Add new user
+      </button>
+    </div>
     <table class="table table-striped">
-      <thead>
+      <thead class="userTableColumn">
         <tr>
           <th (click)="onColumnSelect('id')">#</th>
           <th (click)="onColumnSelect('name')">Name</th>

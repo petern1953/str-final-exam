@@ -36,7 +36,9 @@ export class UserEditorComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+  }
 
   onUpdate(form: NgForm, user: User): void {
     this.updating = true;
